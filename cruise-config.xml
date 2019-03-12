@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<cruise xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="cruise-config.xsd" schemaVersion="111">
+  <server artifactsdir="artifacts" agentAutoRegisterKey="d3eb0b04-d6ad-4743-8dce-c2f9348d78a5" webhookSecret="f79acc55-6948-4217-a9c0-8cb28c957ca7" commandRepositoryLocation="default" serverId="a660712a-7d56-47e3-98cd-38fa410a2eb9" tokenGenerationKey="879d0a5e-bbe9-4f98-a5ad-aa087dbd616e" />
+  <pipelines group="defaultGroup">
+    <pipeline name="Sample">
+      <materials>
+        <git url="https://github.com/ankitsri11/gocd-pipeline-as-code" />
+      </materials>
+      <stage name="defaultStage">
+        <jobs>
+          <job name="defaultJob">
+            <tasks>
+              <exec command="ls" />
+            </tasks>
+          </job>
+        </jobs>
+      </stage>
+    </pipeline>
+  </pipelines>
+  <agents>
+    <agent hostname="f990d59f143f" ipaddress="172.17.0.3" uuid="6e1b5348-4291-4297-9534-28b933c260cf" />
+  </agents>
+</cruise>
